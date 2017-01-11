@@ -1,16 +1,16 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { HackerNewsApiService } from './hackernews-api.service';
+import { HackerNewsAPIService } from './hackernews-api.service';
 
-describe('HackerNewsApiService', () => {
+describe('HackerNewsAPIService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [HackerNewsApiService]
+      providers: [HackerNewsAPIService]
     });
   });
 
-  it('should ...', inject([HackerNewsApiService], (service: HackerNewsApiService) => {
+  it('should ...', inject([HackerNewsAPIService], (service: HackerNewsAPIService) => {
     expect(service).toBeTruthy();
   }));
 });
