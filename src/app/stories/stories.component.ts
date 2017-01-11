@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoriesComponent implements OnInit {
 
-  item: number[];
+  items: number[];
 
   constructor() {
-    this.item = Array(30);
+    this.items = Array(30);
   }
 
   ngOnInit() {
