@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+import { HackerNewsApiService } from '../hackernews-api.service';
+
 
 @Component({
   selector: 'app-stories',
@@ -7,14 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoriesComponent implements OnInit {
 
-  items: number[];
+  items: any;
 
-  constructor() {
+  constructor(private _hackerNewsAPIService: HackerNewsApiService) {
     this.items = Array(30);
   }
 
   ngOnInit() {
-
+    this._hackerNewsAPIService.fetchStories()
+                    .subscribe(
+                      items => this.items = items,
+                      error => console.log('Error fetching stories'));
   }
 
 }
